@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<link href="test.css" rel="stylesheet" type="text/css">
+        <link href="register.css" rel="stylesheet" type="text/css">
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        
+
+		<title>eatLocal - Register</title>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-success">
+			<a class="navbar-brand" href="#"><img src="images/LOGO.png" alt="LOGO" width="130em"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="#">Vegatables</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Fruit</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Homemade Food</a></li>
+				</ul>
+				<ul class="navbar-nav navbar-right">
+					<li class="nav-item"><a class="nav-link" href="#"><span>X</span>Log In</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><span>X</span>Sign Up</a></li>
+				</ul>
+			</div>
+		</nav>
+        
+        <div class="bg"> 
+		<section id="registerform" class="outer-wrapper">
+		<div class="inner-wrapper">
+        	<div class="container-fluid">
+            	<div class="row">
+					<div class="col-md-3"></div>
+                	<div class="col-md-6">
+						<h2 class="text-center">Register</h2>
+						<center><p><i>Fields marked with an asterisk (*) must be entered.</i></p></center>
+						<form role="form">
+							<div class="row">
+								<div class="col-md-6">
+									<label for="fname">*First Name</label>
+									<input type="text" class="form-control" id="fname" name="fname" size="15" maxlength="50" required />
+								</div>
+								<div class="col-md-6">
+									<label for="lname">*Last Name</label>
+									<input type="text" class="form-control" id="lname" name="lname" size="15" maxlength="50" required />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="email">*Email:</label>
+									<input type="email" class="form-control" id="email" name="email" size="30" maxlength="50" required />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="password">*Password:</label>
+									<input type="password" class="form-control" id="password" name="password" size="20" maxlength="20" required />
+									<span id="pwd_msg" class="error_msg"></span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="rePassword">*Confirm Password:</label>
+									<input type="password" class="form-control" id="rePassword" size="20" maxlength="20" onChange="checkRePassword(document)" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<center><input type="checkbox">By signing up I agree to eatLocal's Terms of Use and Privacy Policy</center>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<center><input type="submit" id="submit" value="Submit" onClick="return validateInfo(document)" /></center>
+								</div>
+								<div class="col">
+									<center><input type="reset" id="reset" value="Clear Form" onClick="reset_frm(document)" /></center>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>        
+		</div>
+		</section>
+		</div>
+	</body>
+</html>
